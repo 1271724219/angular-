@@ -1,0 +1,13 @@
+<!-- <p>todo-list works!</p> -->
+<h2>TODOList</h2>
+
+<input type="text" [(ngModel)]="keyName" (keydown)="handleKeyDown($event)">
+
+<h3>未完成</h3>
+<li *ngFor="let item of dataList;let key = index" [hidden]="item.bool">
+    <input type="checkbox" (change)="handleChange()"  id="" [(ngModel)]="item.bool">{{item.title}} <button (click)="handleClick(key)">del</button><br/>
+</li>
+<h3>已完成</h3>
+<li *ngFor="let item of dataList;let key = index" [hidden]="!item.bool">
+    <input type="checkbox" (change)="handleChange()"  id="" [(ngModel)]="item.bool">{{item.title}} <button (click)="handleClick(key)" [disabled]="item.bool">del</button><br/>
+</li>

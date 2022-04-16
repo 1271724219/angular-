@@ -1,0 +1,55 @@
+  <app-header></app-header>
+  <p>我是首页{{title}}</p>
+<!-- <img src="assets/imges/1.jpg" alt=""> -->
+<!-- <img [src]="src" alt="">
+
+<br/>
+
+
+<div *ngFor="let item of list;let key = index" [ngClass]="{'red': key==1,'blue':key==2}">
+  {{key + item.name}}
+</div> -->
+
+
+<!-- <div *ngIf="bool">
+1111
+</div> -->
+<!-- 
+<span [ngSwitch]="num">
+<p *ngSwitchCase="1">
+是
+</p>
+<p *ngSwitchCase="2">
+否
+</p>
+<p *ngSwitchDefault>
+
+</p>
+</span>
+
+<div [ngClass]="{'red': bool,'blue':bool}">
+  q123123213123
+</div> -->
+<!-- <div [ngStyle]="{'background': 'red'}">11111111111111111</div>
+<div [ngStyle]="{'background': color}">11111111111111111</div>
+
+<div>{{today | date:'yyyy-MM-dd HH:mm:ss'}}</div> -->
+
+<!-- <button (click)='run()'>执行事件</button>
+<button (click)='handleClick()'>执行事件获取数据</button>
+<button (click)='handleClick1()'>执行事件改变数据</button>
+<button (click)='handleClick2($event)'>执行方法获取事件对象</button>
+
+<h2>键盘按下</h2>
+<input type="text" (keydown)='keyDown($event)'>
+<h2>键盘抬起</h2>
+<input type="text" (keyup)='keyUp($event)'> -->
+
+<h2>双向绑定</h2>
+
+<input type="text" [(ngModel)]="myinput">
+
+{{myinput}}
+
+<button (click)="inputClick()">点击改变input的值</button>
+<button (click)="inputClick1()">点击获取input的值</button>

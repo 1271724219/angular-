@@ -1,0 +1,36 @@
+<!-- <p>{{msg + username}}</p>
+
+<div *ngFor="let item of dataList">
+    {{item}}
+</div>
+
+
+<div *ngFor="let item of items">
+    {{item}}
+</div>
+
+
+<ul>
+    <li *ngFor="let item of userList">
+        {{item.name + '------------'+item.age}}
+    </li>
+</ul> -->
+
+<div *ngFor="let item of carList">
+    <h2>{{item.name}}</h2>
+        <ul>
+            <li *ngFor="let data of item.list">
+                {{data.name}}------{{data.price}}
+            </li>
+        </ul>
+    
+</div>
+
+<h2>点击变色</h2>
+
+<!-- <div *ngFor="let item of dataList;let key = index" (click)="handleClick(key)" [ngClass]="{'red': num<=2&&num==key,'blue':num>2&&num==key}">{{item}}</div> -->
+<div *ngFor="let item of dataList;let key = index" (click)="handleClick(key)" [ngStyle]="{'background': num==key?color:''}">{{item}}</div>
+
+<input type="radio" value="1" name="sex" [(ngModel)]="radioType" ><label>男</label>
+<input type="radio" value="2" name="sex" [(ngModel)]="radioType" ><label>女</label>
+<button (click)="radioClick()">按钮</button>

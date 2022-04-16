@@ -1,0 +1,6 @@
+<!-- <p>search works!</p> -->
+<h2>京东搜索</h2>
+
+<input type="text" [(ngModel)]="name"> <button (click)="handleAdd()">搜索</button>
+
+<li *ngFor="let item of dataList; let i=index">{{item}} <button (click)="handleDel(i)">del</button></li>
